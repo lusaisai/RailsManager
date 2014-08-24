@@ -17,6 +17,7 @@ namespace RailsManager
         {
             get
             {
+                this.readPID();
                 return this.railsProcess != null && !this.railsProcess.HasExited;
             }
         }
@@ -59,13 +60,11 @@ namespace RailsManager
             }
         }
 
-        public bool stop(string environment)
+        public bool stop()
         {
             readPID();
             this.railsProcess.Kill();
             this.railsProcess = null;
-            this.appProcess.Kill();
-            this.appProcess = null;
             this.removePidFile();
             return true;
         }
@@ -83,7 +82,7 @@ namespace RailsManager
             this.appProcess.StartInfo.CreateNoWindow = true;
             this.appProcess.Start();
 
-            return false;
+            return true;
         }
 
         private void removePidFile()

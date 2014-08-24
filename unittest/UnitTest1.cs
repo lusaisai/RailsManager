@@ -16,9 +16,7 @@ namespace unittest
 
             a.run("development", 3000);
 
-            a.appProcess.OutputDataReceived += (sender, args) => Console.WriteLine("received output: {0}", args.Data);
-
-            a.stop("development");
+            a.stop();
             // new RailsApp(@"c:\aaa");
         }
     }
