@@ -73,7 +73,7 @@
             this.list.GridLines = true;
             this.list.Location = new System.Drawing.Point(12, 42);
             this.list.Name = "list";
-            this.list.Size = new System.Drawing.Size(659, 213);
+            this.list.Size = new System.Drawing.Size(555, 171);
             this.list.TabIndex = 3;
             this.list.UseCompatibleStateImageBehavior = false;
             this.list.View = System.Windows.Forms.View.Details;
@@ -103,7 +103,7 @@
             this.toTray});
             this.tools.Location = new System.Drawing.Point(0, 0);
             this.tools.Name = "tools";
-            this.tools.Size = new System.Drawing.Size(692, 39);
+            this.tools.Size = new System.Drawing.Size(580, 39);
             this.tools.TabIndex = 4;
             this.tools.Text = "toolStrip1";
             // 
@@ -217,12 +217,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(692, 405);
+            this.ClientSize = new System.Drawing.Size(580, 315);
             this.Controls.Add(this.tools);
             this.Controls.Add(this.list);
             this.Controls.Add(this.stop);
             this.Controls.Add(this.start);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "mainForm";
             this.Text = "Rails Manager";
             this.Load += new System.EventHandler(this.mainForm_Load);

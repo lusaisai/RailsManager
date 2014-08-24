@@ -26,6 +26,7 @@ namespace RailsManager
         private void loadList()
         {
             list.Items.Clear();
+            if (Properties.Settings.Default.apps == null) return;
             foreach (string app in Properties.Settings.Default.apps)
             {
                 ListViewItem li = new ListViewItem(app);
@@ -41,7 +42,7 @@ namespace RailsManager
 
         private void mainForm_Load(object sender, EventArgs e)
         {
-            if (Properties.Settings.Default.railsExe == null) setRailsExecutable_Click(this, EventArgs.Empty);
+            if (Properties.Settings.Default.railsExe == null || !Properties.Settings.Default.railsExe.Contains("rails")) setRailsExecutable_Click(this, EventArgs.Empty);
             loadList();
             autoStart();
             Timer t = new Timer();
@@ -138,6 +139,7 @@ namespace RailsManager
         {
             OpenFileDialog f = new OpenFileDialog();
             f.Filter = "rails script|rails.bat";
+            f.Title = "Please browse and choose the rails.bat file";
             if (DialogResult.OK == f.ShowDialog())
             {
                 Properties.Settings.Default.railsExe = f.FileName;
