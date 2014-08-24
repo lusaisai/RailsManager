@@ -1,0 +1,7 @@
+C:\projects\RailsManager\unittest\bin\Debug\unittest.dll
+C:\projects\RailsManager\unittest\bin\Debug\unittest.pdb
+C:\projects\RailsManager\unittest\bin\Debug\RailsManager.exe
+C:\projects\RailsManager\unittest\bin\Debug\RailsManager.pdb
+C:\projects\RailsManager\unittest\obj\Debug\unittest.csprojResolveAssemblyReference.cache
+C:\projects\RailsManager\unittest\obj\Debug\unittest.dll
+C:\projects\RailsManager\unittest\obj\Debug\unittest.pdb

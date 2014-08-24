@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Express 2013 for Windows Desktop
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RailsManager", "RailsManager\RailsManager.csproj", "{DB62E782-AC7B-4465-A787-EA90114CCE3B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "unittest", "unittest\unittest.csproj", "{4B7F4278-EE14-4B1C-8131-3079C647FFD1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DB62E782-AC7B-4465-A787-EA90114CCE3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB62E782-AC7B-4465-A787-EA90114CCE3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB62E782-AC7B-4465-A787-EA90114CCE3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB62E782-AC7B-4465-A787-EA90114CCE3B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B7F4278-EE14-4B1C-8131-3079C647FFD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B7F4278-EE14-4B1C-8131-3079C647FFD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B7F4278-EE14-4B1C-8131-3079C647FFD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B7F4278-EE14-4B1C-8131-3079C647FFD1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
