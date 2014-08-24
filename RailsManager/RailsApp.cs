@@ -29,7 +29,9 @@ namespace RailsManager
             if (!File.Exists(railsExecutable)) throw new FileNotFoundException(railsExecutable + " does not exist");
             this.appdir = directory;
             this.railsExecutable = railsExecutable;
-            this.pidfile = Path.Combine(new string[]{directory, "tmp", "pids", "server.pid"});
+            this.pidfile = Path.Combine(directory, "tmp");
+            this.pidfile = Path.Combine(this.pidfile, "pids");
+            this.pidfile = Path.Combine(this.pidfile, "server.pid");
             readPID();
         }
 
