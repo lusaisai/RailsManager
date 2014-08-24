@@ -1,9 +1,0 @@
-C:\projects\RailsManager\RailsManager\bin\Debug\RailsManager.exe.config
-C:\projects\RailsManager\RailsManager\bin\Debug\RailsManager.exe
-C:\projects\RailsManager\RailsManager\bin\Debug\RailsManager.pdb
-C:\projects\RailsManager\RailsManager\obj\Debug\RailsManager.csprojResolveAssemblyReference.cache
-C:\projects\RailsManager\RailsManager\obj\Debug\RailsManager.mainForm.resources
-C:\projects\RailsManager\RailsManager\obj\Debug\RailsManager.Properties.Resources.resources
-C:\projects\RailsManager\RailsManager\obj\Debug\RailsManager.csproj.GenerateResource.Cache
-C:\projects\RailsManager\RailsManager\obj\Debug\RailsManager.exe
-C:\projects\RailsManager\RailsManager\obj\Debug\RailsManager.pdb
