@@ -76,7 +76,6 @@ namespace RailsManager
         {
             if (this.isRunning) return true;
             
-
             this.appProcess = new Process();
             this.appProcess.StartInfo = new ProcessStartInfo(this.railsExecutable, String.Format("server -e {0} -p {1}", environment, port));
             this.appProcess.StartInfo.WorkingDirectory = this.appdir;
@@ -93,7 +92,7 @@ namespace RailsManager
             {
                 File.Delete(this.pidfile);
             }
-            catch (FileNotFoundException)
+            catch (IOException)
             {
 
             }
