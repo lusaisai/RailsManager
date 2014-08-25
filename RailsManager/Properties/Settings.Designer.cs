@@ -45,5 +45,16 @@ namespace RailsManager.Properties {
                 this["railsExe"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Collections.ArrayList config {
+            get {
+                return ((global::System.Collections.ArrayList)(this["config"]));
+            }
+            set {
+                this["config"] = value;
+            }
+        }
     }
 }

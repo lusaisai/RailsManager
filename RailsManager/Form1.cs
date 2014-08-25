@@ -12,6 +12,8 @@ namespace RailsManager
             InitializeComponent();
         }
 
+        private int selectedAppIndex = -1;
+
         private void addNewApp_Click(object sender, EventArgs e)
         {
             FolderBrowserDialog f = new FolderBrowserDialog();
@@ -43,6 +45,8 @@ namespace RailsManager
         private void mainForm_Load(object sender, EventArgs e)
         {
             if (Properties.Settings.Default.railsExe == null || !Properties.Settings.Default.railsExe.Contains("rails")) setRailsExecutable_Click(this, EventArgs.Empty);
+            if (Properties.Settings.Default.config == null) Properties.Settings.Default.config = new ArrayList();
+            Properties.Settings.Default.Save();
             loadList();
             autoStart();
             Timer t = new Timer();
@@ -80,6 +84,7 @@ namespace RailsManager
         {
             foreach (ListViewItem li in list.Items)
             {
+                list.Items[li.Index].Selected = true;
                 startApp(li); 
             }
         }
@@ -104,7 +109,8 @@ namespace RailsManager
         private RailsApp startRails(String appPath)
         {
             RailsApp app = new RailsApp(Properties.Settings.Default.railsExe, appPath);
-            app.run("development", 3000);
+
+            app.run(env.Text, (int)port.Value);
             return app;
         }
 
@@ -162,6 +168,52 @@ namespace RailsManager
             else
             {
                 this.Show();
+            }
+        }
+
+
+        private void list_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)
+        {
+            if ( list.SelectedItems.Count < 1 ) return;
+            int index = list.SelectedItems[0].Index;
+            this.selectedAppIndex = index;        
+
+            if ( Properties.Settings.Default.config.Count > index )
+            {
+                string[] s = ((string)(Properties.Settings.Default.config[index])).Split('|');
+                env.Text = s[0];
+                port.Value = Convert.ToInt32( s[1] );
+
+            }
+            else
+            {
+                env.SelectedIndex = 0;
+                Properties.Settings.Default.config.Add( env.Text + "|" + port.Value );
+                Properties.Settings.Default.Save();
+            }
+
+        }
+
+        private void env_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            saveConfig();
+        }
+
+        private void port_ValueChanged(object sender, EventArgs e)
+        {
+            saveConfig();
+        }
+
+        private void saveConfig()
+        {
+            if (this.selectedAppIndex < 0) return;
+            try
+            {
+                Properties.Settings.Default.config[this.selectedAppIndex] = env.Text + "|" + port.Value;
+                Properties.Settings.Default.Save();
+            }
+            catch (ArgumentOutOfRangeException)
+            {
             }
         }
 

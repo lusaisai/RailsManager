@@ -47,7 +47,12 @@
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.toTray = new System.Windows.Forms.ToolStripButton();
             this.tray = new System.Windows.Forms.NotifyIcon(this.components);
+            this.label1 = new System.Windows.Forms.Label();
+            this.env = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.port = new System.Windows.Forms.NumericUpDown();
             this.tools.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.port)).BeginInit();
             this.SuspendLayout();
             // 
             // start
@@ -69,6 +74,7 @@
             this.list.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2});
+            this.list.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.list.FullRowSelect = true;
             this.list.GridLines = true;
             this.list.Location = new System.Drawing.Point(12, 42);
@@ -77,6 +83,7 @@
             this.list.TabIndex = 3;
             this.list.UseCompatibleStateImageBehavior = false;
             this.list.View = System.Windows.Forms.View.Details;
+            this.list.ItemSelectionChanged += new System.Windows.Forms.ListViewItemSelectionChangedEventHandler(this.list_ItemSelectionChanged);
             // 
             // columnHeader1
             // 
@@ -213,11 +220,73 @@
             this.tray.Visible = true;
             this.tray.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tray_MouseClick);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label1.Location = new System.Drawing.Point(9, 249);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(87, 17);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Environment";
+            // 
+            // env
+            // 
+            this.env.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.env.FormattingEnabled = true;
+            this.env.Items.AddRange(new object[] {
+            "development",
+            "test",
+            "production"});
+            this.env.Location = new System.Drawing.Point(102, 249);
+            this.env.Name = "env";
+            this.env.Size = new System.Drawing.Size(121, 22);
+            this.env.TabIndex = 8;
+            this.env.SelectedIndexChanged += new System.EventHandler(this.env_SelectedIndexChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Tahoma", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(279, 250);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(34, 17);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Port";
+            // 
+            // port
+            // 
+            this.port.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.port.Location = new System.Drawing.Point(319, 249);
+            this.port.Maximum = new decimal(new int[] {
+            49151,
+            0,
+            0,
+            0});
+            this.port.Minimum = new decimal(new int[] {
+            1024,
+            0,
+            0,
+            0});
+            this.port.Name = "port";
+            this.port.Size = new System.Drawing.Size(120, 22);
+            this.port.TabIndex = 10;
+            this.port.Value = new decimal(new int[] {
+            3000,
+            0,
+            0,
+            0});
+            this.port.ValueChanged += new System.EventHandler(this.port_ValueChanged);
+            // 
             // mainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(580, 315);
+            this.Controls.Add(this.port);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.env);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.tools);
             this.Controls.Add(this.list);
             this.Controls.Add(this.stop);
@@ -229,6 +298,7 @@
             this.Load += new System.EventHandler(this.mainForm_Load);
             this.tools.ResumeLayout(false);
             this.tools.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.port)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -253,6 +323,10 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripButton toTray;
         private System.Windows.Forms.NotifyIcon tray;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox env;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.NumericUpDown port;
     }
 }
 
