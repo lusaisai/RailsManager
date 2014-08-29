@@ -110,7 +110,7 @@
             this.toTray});
             this.tools.Location = new System.Drawing.Point(0, 0);
             this.tools.Name = "tools";
-            this.tools.Size = new System.Drawing.Size(580, 39);
+            this.tools.Size = new System.Drawing.Size(579, 39);
             this.tools.TabIndex = 4;
             this.tools.Text = "toolStrip1";
             // 
@@ -224,7 +224,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label1.Location = new System.Drawing.Point(9, 249);
+            this.label1.Location = new System.Drawing.Point(9, 250);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(87, 17);
             this.label1.TabIndex = 7;
@@ -238,7 +238,7 @@
             "development",
             "test",
             "production"});
-            this.env.Location = new System.Drawing.Point(102, 249);
+            this.env.Location = new System.Drawing.Point(104, 249);
             this.env.Name = "env";
             this.env.Size = new System.Drawing.Size(121, 22);
             this.env.TabIndex = 8;
@@ -248,7 +248,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(279, 250);
+            this.label2.Location = new System.Drawing.Point(281, 250);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(34, 17);
             this.label2.TabIndex = 9;
@@ -257,7 +257,7 @@
             // port
             // 
             this.port.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.port.Location = new System.Drawing.Point(319, 249);
+            this.port.Location = new System.Drawing.Point(321, 249);
             this.port.Maximum = new decimal(new int[] {
             49151,
             0,
@@ -282,7 +282,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(580, 315);
+            this.ClientSize = new System.Drawing.Size(579, 312);
             this.Controls.Add(this.port);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.env);
