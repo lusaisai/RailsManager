@@ -18,7 +18,7 @@ namespace RailsManager
             get
             {
                 this.readPID();
-                return this.railsProcess != null && !this.railsProcess.HasExited;
+                return this.railsProcess != null && !this.railsProcess.HasExited && this.railsProcess.ProcessName.ToLower().Contains("ruby");
             }
         }
 

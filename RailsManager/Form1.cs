@@ -138,7 +138,9 @@ namespace RailsManager
 
         private void refresh_Click(object sender, EventArgs e)
         {
-            loadList();
+            stopApp_Click(null, EventArgs.Empty);
+            list.Items[this.selectedAppIndex].Selected = true;
+            runApp_Click(null, EventArgs.Empty);
         }
 
         private void setRailsExecutable_Click(object sender, EventArgs e)

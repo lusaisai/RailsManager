@@ -41,7 +41,7 @@
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.runApp = new System.Windows.Forms.ToolStripButton();
             this.stopApp = new System.Windows.Forms.ToolStripButton();
-            this.refresh = new System.Windows.Forms.ToolStripButton();
+            this.restart = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.setRailsExecutable = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
@@ -103,7 +103,7 @@
             this.toolStripSeparator2,
             this.runApp,
             this.stopApp,
-            this.refresh,
+            this.restart,
             this.toolStripSeparator1,
             this.setRailsExecutable,
             this.toolStripSeparator3,
@@ -167,17 +167,17 @@
             this.stopApp.ToolTipText = "Stop the selected Rails app";
             this.stopApp.Click += new System.EventHandler(this.stopApp_Click);
             // 
-            // refresh
+            // restart
             // 
-            this.refresh.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.refresh.Image = ((System.Drawing.Image)(resources.GetObject("refresh.Image")));
-            this.refresh.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.refresh.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.refresh.Name = "refresh";
-            this.refresh.Size = new System.Drawing.Size(36, 36);
-            this.refresh.Text = "toolStripButton1";
-            this.refresh.ToolTipText = "Refresh the status";
-            this.refresh.Click += new System.EventHandler(this.refresh_Click);
+            this.restart.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.restart.Image = ((System.Drawing.Image)(resources.GetObject("restart.Image")));
+            this.restart.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.restart.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.restart.Name = "restart";
+            this.restart.Size = new System.Drawing.Size(36, 36);
+            this.restart.Text = "toolStripButton1";
+            this.restart.ToolTipText = "restart the selected Rails app";
+            this.restart.Click += new System.EventHandler(this.refresh_Click);
             // 
             // toolStripSeparator1
             // 
@@ -316,7 +316,7 @@
         private System.Windows.Forms.ToolStripButton removeApp;
         private System.Windows.Forms.ToolStripButton runApp;
         private System.Windows.Forms.ToolStripButton stopApp;
-        private System.Windows.Forms.ToolStripButton refresh;
+        private System.Windows.Forms.ToolStripButton restart;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripButton setRailsExecutable;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
