@@ -176,7 +176,7 @@
             this.restart.Name = "restart";
             this.restart.Size = new System.Drawing.Size(36, 36);
             this.restart.Text = "toolStripButton1";
-            this.restart.ToolTipText = "restart the selected Rails app";
+            this.restart.ToolTipText = "Restart the selected Rails app";
             this.restart.Click += new System.EventHandler(this.refresh_Click);
             // 
             // toolStripSeparator1
